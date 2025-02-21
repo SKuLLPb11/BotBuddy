@@ -25,6 +25,7 @@ body{
     background-color: white;
     border-radius: 1rem;
     box-shadow: 0.5rem 0.5rem 0.5rem rgba(26, 49, 138, 0.123);
+ 
 }
 
 .chatHeader{
@@ -43,6 +44,26 @@ body{
     color: white;
 
 }
+.Chat-Body {
+    max-height: 400px; /* Adjust height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Hide horizontal scrolling */
+ 
+  }
+  .Chat-Body::-webkit-scrollbar {
+    width: 6px;
+    height: 10px; /* Width of scrollbar */
+  }
+  
+  .Chat-Body::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Color of scrollbar */
+    border-radius: 10px; /* Rounded scrollbar */
+  }
+  
+  .Chat-Body::-webkit-scrollbar-track {
+    background: transparent; /* Background behind scrollbar */
+  }
+  
 
 .chat-info{
     display:flex;
@@ -60,6 +81,7 @@ body{
 }
  
 .chat-info svg{
+
     width: 3.5rem;
     height: 3.5rem;
     background-color : aliceblue;
@@ -94,7 +116,7 @@ body{
 }
 .message-text{
     background-color: #f1f1f1;
-    border-radius: 0.6rem 0.6rem 0.6rem 0;
+    border-radius: 0. 0.6rem 0.6rem 0;
     width: 70%;
     padding: 10px;
     align-self: flex-start;
@@ -108,14 +130,16 @@ body{
     margin-right: 10px;
     justify-content: flex-end;
     padding: 10px;
-    align-items: center;
+    margin-top: 1rem;
+    /* align-items: center; */
     background-color:teal;
     max-width: 75%;
     line-height: 1.5rem;
     justify-content: left;
     margin-left: 30%;
     color: aliceblue;
-    border-radius: 0.6rem 0.6rem 0 0.6rem;
+    border-radius: 0.6rem 0 0 0.6rem;
+   
 }
 .bot-message .message-think{
     display: flex;
@@ -165,7 +189,7 @@ body{
     padding: 10px;
     justify-content: space-between;
     padding: 10px;
-    background-color: aliceblue;
+  
     border-radius: 0 0 1rem 1rem;
     align-items: center
 }
@@ -174,9 +198,10 @@ body{
     width: 100%;
     display: flex;
     align-items: center;
-    background: aliceblue;
+    background: white;
     border-radius: 1rem;
     padding: 5px;
+    border:1px solid teal;
 }
 .chat-controls{
     display: flex;
@@ -205,12 +230,12 @@ body{
     font-size: 18px; /* Adjust icon size */
     color: teal;
     border:none;
-    background-color: aliceblue;
+    background-color: white;
 }
 
 #send-message{
     display: none;
-    color: aliceblue;
+    color: white;
     background:teal;
 }
 .message-input:valid~.chat-controls #send-message{
@@ -232,6 +257,26 @@ body{
     width: 100%;
     resize: none;
     padding: 14px 0 13px 18px;
-    border-radius: 1rem;
+    border-radius: 1rem 0 0 1rem;
     font-size: 1rem;
+}
+
+/* Hide the scrollbar but allow scrolling */
+/*
+/* Webkit-based browsers (Chrome, Edge, Safari) */
+.message-input::-webkit-scrollbar {
+    width: 6px; /* Thin scrollbar */
+}
+
+.message-input::-webkit-scrollbar-track {
+    background: transparent; /* No track background */
+}
+
+.message-input::-webkit-scrollbar-thumb {
+    background: #ccc; /* Scrollbar color */
+    border-radius: 3px; /* Rounded scrollbar */
+}
+
+.message-input::-webkit-scrollbar-thumb:hover {
+    background: #888; /* Darker color on hover */
 }
